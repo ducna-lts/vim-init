@@ -59,7 +59,7 @@ let g:is_posix = 1
 
 set noswapfile
 set nojoinspaces
-set nowrap
+set wrap
 set number
 set ttyfast
 set laststatus=2
@@ -276,7 +276,8 @@ set diffopt+=vertical
 nnoremap <Leader>1 :diffget 1<CR>:diffupdate<CR>
 nnoremap <Leader>2 :diffget 2<CR>:diffupdate<CR>
 
-set clipboard=unnamed
+" set clipboard=unnamed
+set clipboard=unnamedplus
 
 function! DeleteCurrentFileAndBuffer()
   call delete(expand('%'))
@@ -435,7 +436,7 @@ let g:NERDTreeHighlightCursorline = 1
 lua <<EOF
 require('go').setup({
   goimport='goimports', -- goimport command
-  gofmt = 'gofumpts', --gofmt cmd,
+  gofmt = 'gofumpt', --gofmt cmd,
   max_line_len = 120, -- max line length in goline format
   tag_transform = false, -- tag_transfer  check gomodifytags for details
   verbose = true,  -- output loginf in messages
